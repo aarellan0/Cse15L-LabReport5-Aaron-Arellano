@@ -61,3 +61,28 @@ The general steps that my script uses is as follows:
 
 ## Example 1 - list methods lab 3 repository
 
+In this first repository, which was originally from lab 3, the ListExamples file had an issue with the filter method, which did not properly filter the
+elements in the JUNIT array, as it incorrectly ordered the strings because of a faulty comparison in the method. The bash script was able to detect this
+and let the user know that there was an issue with the outcome, prompting a resubmission.
+
+![Image](bash1.png)
+
+## Example 2 - list methods corrected
+
+In this second repository, the ListExamples.java file fixed the filter bug that was present in the previous example, and now correctly compares the strings, leading to the right order of the returned array. Therefore, because of the correct implementation, the script should tell the user that all of the tests passed and give them a passing score, as shown with the output of the script.
+
+![Image](bash2.png)
+
+## Example 3 - list methods filename
+
+In this third example, the repository contains a correct implementation of the filter and merge methods. However, in the repository, the file is under the
+name of ListMethods and not ListExamples. Because of this, the script should report that the file could not be found, as shown below.
+
+![Image](bash3.png)
+
+## Example 4 - list methods nested
+
+In this last example, the repository contains the file ListExamples. However, when compared to other repositories, in here the file is located within another directory called pa1. Therefore in order to find and execute the file, the script would need to recursively search through the repository instead of simply looking through the initial files. Because my bash script uses grep -r to search for the file recursively in student-submission before executing, the script succesfully finds the file and tests it. In the end, all of the tests will pass and the submission gets 100, as shown below.
+
+![Image](bash4.png)
+
